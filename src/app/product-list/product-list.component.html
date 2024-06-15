@@ -1,0 +1,10 @@
+<h2>Product List</h2>
+<ul>
+<li *ngFor="let product of products">
+{{product.name}} - ${{product.price}}
+<button (click) = "editProduct(product.id)">Edit</button> <!-- update and delete don't work -->
+<button (click) = "deleteProduct(product.id)">Delete</button>
+</li>
+
+</ul>
+<button class= "button" routerLink="/product-add" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Add Product</button>
